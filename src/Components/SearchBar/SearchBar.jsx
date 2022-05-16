@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const SearchBar = (props) => {
     
-    const [serach, setSearch] = useState("");
+    const [search, setSearch] = useState("");
     function SearchResults(event) {
         event.preventDefault();
 
@@ -20,7 +20,7 @@ const SearchBar = (props) => {
                 return true
             }
         });
-        props.setGames(respose);
+        props.setGames(response);
         setSearch("")
         if (search === "") {
             props.getGames()
