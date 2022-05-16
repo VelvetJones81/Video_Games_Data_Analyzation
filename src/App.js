@@ -4,7 +4,7 @@ import axios from 'axios';
 function App() {
 
   const [videoGames, setVideoGames] = useState([]);
-
+console.log(videoGames)
 useEffect(() => {
   getVideoGames();
 }, []);
