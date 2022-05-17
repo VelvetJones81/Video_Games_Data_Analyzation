@@ -1,11 +1,11 @@
 import React, {useEffect, useState } from 'react';
 import axios from 'axios';
-import SearchBar from "./Components/SearchBar/SearchBar";
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
 
   const [videoGames, setVideoGames] = useState([]);
-console.log(videoGames)
+
 useEffect(() => {
   getVideoGames();
 }, []);
@@ -15,8 +15,8 @@ async function getVideoGames() {
     const response = await axios.get("https://localhost:7260/api/games");
     setVideoGames(response.data);
   }
-  catch(error){
-    console.log(`ERROR in getVideoGames EXCPETION: ${error}`)
+  catch(ex){
+    console.log(`ERROR in getVideoGames EXCPETION: ${ex}`)
   }
 }
 
